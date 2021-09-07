@@ -14,8 +14,6 @@ public class Buttons {
 		driver.get("https://letcode.in/test");
 		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
-////////////////
-		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("(//a[@class='card-footer-item'])[2]")).click();
 		driver.findElement(By.id("home")).click();
 		driver.navigate().back();
