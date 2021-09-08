@@ -32,19 +32,21 @@ public class SelectBox {
 		WebElement lang = driver.findElement(By.id("lang"));
 		Select l = new Select(lang);
 		l.selectByIndex(4);
-		List print = l.getOptions();
+		List<WebElement> print = l.getOptions();
 		for (WebElement i: print)
 		{
 			System.out.println(i.getText());
 		}
 			
+		WebElement cout = driver.findElement(By.id("country"));
+		Select sc = new Select(cout);
+		sc.selectByValue("India");
+		WebElement selcou = sc.getFirstSelectedOption();
+		System.out.println(selcou.getText());
+			
 		
 		
-		System.out.println("The values are: "+print);
-		
-		
-		
-		driver.close();
+		//driver.close();
 	}
 
 }
