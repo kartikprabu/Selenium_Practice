@@ -13,7 +13,7 @@ public class ScreenShot {
 
 	public static void main(String[] args) throws IOException {
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/gis00227/eclipse-workspace/Letcodepractice/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/gis00227/eclipse-workspace/Letcodepractice/drivers/chromedriver 2");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://inventory-dashboard.imdev.eng.oneviewcloud.com/");
 		driver.manage().window().maximize();
