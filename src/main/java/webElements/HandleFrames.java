@@ -16,10 +16,14 @@ public class HandleFrames {
 		driver.get("https://w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt");
 		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
-		//WebElement result = driver.findElement(By.xpath("//iframe[@name=iframeResult]"));
-		driver.switchTo().frame(0);
-		driver.findElement(By.cssSelector("html>body>button")).click();
-		driver.switchTo().alert();
+		WebElement result = driver.findElement(By.id("iframeResult"));
+		driver.switchTo().frame(result);
+		driver.findElement(By.xpath("//button[text()='Try it']")).click();
+		driver.switchTo().alert().sendKeys("Kartik Prabu");
+		driver.switchTo().alert().accept();
+		
+		String rp= driver.findElement(By.id("demo")).getText();
+		System.out.println("Name is: " +rp);
 		
 		
 	/*	driver.switchTo().frame(1);
@@ -27,7 +31,7 @@ public class HandleFrames {
 		driver.findElement(By.xpath("/html/body/app-root/app-frame-content/div/div/form/div[2]/div/input")).sendKeys("Prabu");
 		driver.switchTo().frame(1);
 		driver.findElement(By.name("email")).sendKeys("Kartik@gmail.com");*/
-		driver.quit();
+		//driver.quit();
 	}
 	
 	

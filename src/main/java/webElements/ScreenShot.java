@@ -21,11 +21,14 @@ public class ScreenShot {
 		File firstscr = driver.getScreenshotAs(OutputType.FILE);
 		File dest = new File("./snaps/img.png");
 		FileHandler.copy(firstscr, dest);
+		
+		// Particular button 
 		WebElement ele = driver.findElementByXPath("(//input[@name='signInSubmitButton'])[2]");
 		File elescr = ele.getScreenshotAs(OutputType.FILE);
 		File eledest = new File("./snaps/img1.png");
 		FileHandler.copy(elescr, eledest);
 		
+		// Specific body
 		WebElement sec = driver.findElementByXPath("(//div[@class='modal-body'])[2]");
 		File secscr = sec.getScreenshotAs(OutputType.FILE);
 		File secdest = new File("./snaps/img2.png");
