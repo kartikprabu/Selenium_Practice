@@ -13,6 +13,8 @@ public class HandleFrames {
 		System.setProperty("webdriver.chrome.driver", "/Users/gis00227/eclipse-workspace/Letcodepractice/drivers/chromedriver 2");
 		WebDriver driver = new ChromeDriver();
 	//	driver.get("https://letcode.in/frame");
+		
+		// W3schools - Frame and Alert task
 		driver.get("https://w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt");
 		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
